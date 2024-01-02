@@ -1,0 +1,46 @@
+# Defining the 4 main functions
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiplication(x,y):
+    return x * y
+
+def division(x,y):
+    return x / y
+
+
+def get_input():
+    first = input("Give me the first to number to work with: ")
+    second = input("Give me the second number to work with: ")
+    operation = input("What do you want to do with these numbers? Add, subtract, multiply or divide? Write the word. ")
+    # Convert the numbers to floats
+    first_number = float(first)
+    second_number = float(second)
+
+    # Perform the operation
+    if operation == "add" or operation == "Add":
+        result = add(first_number,second_number)
+        print("Result:", result)
+    elif operation == "subtract" or operation == "Subtract":
+        result = subtract(first_number,second_number)
+        print("Result: ", result)
+    elif operation == "multiply" or operation ==  "Multiply":
+        result = multiplication(first_number,second_number)
+        print("Result: ", result)
+    elif operation == "divide" or operation == "Divide":
+        result = division(first_number,second_number)
+        print("Result: ", result)
+    else:
+        print("Invalid operation.")
+
+def main():
+    get_input()
+
+if __name__ == "__main__":
+    main()
+
+
+
