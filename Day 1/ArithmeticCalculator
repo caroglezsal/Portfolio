@@ -9,7 +9,10 @@ def multiplication(x,y):
     return x * y
 
 def division(x,y):
-    return x / y
+    if y == 0:
+        print("Invalid operation.")
+    else:
+        return x / y
 
 
 def get_input():
@@ -37,7 +40,13 @@ def get_input():
         print("Invalid operation.")
 
 def main():
-    get_input()
+    while True:
+        print("hey")
+        get_input()
+        print("Do you want to perform another operation? yes/no ")
+        answer = input().lower()
+        if answer != "yes": 
+            break
 
 if __name__ == "__main__":
     main()
